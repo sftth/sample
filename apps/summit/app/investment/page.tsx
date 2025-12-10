@@ -1,3 +1,10 @@
+import Link from 'next/link';
+
+const monthNames = [
+  'January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December'
+];
+
 export default function Investment() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
@@ -57,6 +64,27 @@ export default function Investment() {
                 </tr>
               </tbody>
             </table>
+          </div>
+        </div>
+
+        <div className="mt-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Monthly Investment Breakdown</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {monthNames.map((month, index) => (
+              <Link
+                key={index + 1}
+                href={`/investment/${index + 1}/details`}
+                className="bg-white rounded-lg shadow hover:shadow-lg p-4 transition-shadow hover:bg-indigo-50"
+              >
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h3 className="font-semibold text-gray-900">{month}</h3>
+                    <p className="text-sm text-gray-600">Month {index + 1}</p>
+                  </div>
+                  <span className="inline-block text-indigo-600 font-semibold">→</span>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </main>

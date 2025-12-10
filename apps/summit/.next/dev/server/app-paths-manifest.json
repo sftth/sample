@@ -1,8 +1,4 @@
 {
-  "/asset/page": "app/asset/page.js",
-  "/cash/page": "app/cash/page.js",
-  "/dashboard/page": "app/dashboard/page.js",
-  "/dividend/page": "app/dividend/page.js",
-  "/investment/page": "app/investment/page.js",
-  "/page": "app/page.js"
+  "/investment/[slug]/details/page": "app/investment/[slug]/details/page.js",
+  "/investment/page": "app/investment/page.js"
 }

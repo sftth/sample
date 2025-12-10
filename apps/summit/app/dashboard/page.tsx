@@ -1,9 +1,29 @@
+import Link from 'next/link';
+import Image from 'next/image';
+
 export default function Dashboard() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       <main className="w-full max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-slate-900 mb-2">Dashboard</h1>
-        <p className="text-xl text-slate-600 mb-8">Your portfolio overview</p>
+        <div className="flex justify-between items-center mb-8">
+          <div>
+            <h1 className="text-4xl font-bold text-slate-900 mb-2">Dashboard</h1>
+            <p className="text-xl text-slate-600">Your portfolio overview</p>
+          </div>
+          <Link
+            href="/dashboard/summary"
+            className="inline-flex items-center justify-center p-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition-colors shadow-md hover:shadow-lg"
+            title="View Portfolio Summary"
+          >
+            <Image
+              src="/window.svg"
+              alt="Summary"
+              width={24}
+              height={24}
+              className="invert"
+            />
+          </Link>
+        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white rounded-lg shadow p-6">
