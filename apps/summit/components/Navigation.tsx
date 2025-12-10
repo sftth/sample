@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
@@ -22,8 +23,15 @@ export default function Navigation() {
     <nav className="bg-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
+          {/* Logo with Globe Icon */}
+          <div className="flex-shrink-0 flex items-center gap-3">
+            <Image 
+              src="/globe.svg" 
+              alt="Globe" 
+              width={32} 
+              height={32}
+              className="text-indigo-600"
+            />
             <Link href="/" className="text-2xl font-bold text-indigo-600">
               Context7
             </Link>
