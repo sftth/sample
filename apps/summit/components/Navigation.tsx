@@ -13,6 +13,7 @@ export default function Navigation() {
     { name: 'Dashboard', href: '/dashboard' },
     { name: 'Asset', href: '/asset' },
     { name: 'Investment', href: '/investment' },
+    { name: 'Trading', href: '/trading' },
     { name: 'Dividend', href: '/dividend' },
     { name: 'Cash', href: '/cash' },
   ];
